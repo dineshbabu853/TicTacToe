@@ -24,10 +24,11 @@ function startGame(){
 			cells[i].addEventListener('click' , turnClick  , false );
     }
 }
+let over=false;
 function turnClick(square){
 	 if(  typeof board[square.target.id] == 'number' ){ 
 	 turn( square.target.id  , humanPlayer );
-	 if ( !checkTie() ) { 
+	 if ( over==false && !checkTie()) { 
 		if(document.getElementById("check").checked) turn(bestSpot() , aiPlayer );
 		else  turn(randomSpot() , aiPlayer );
 	 }
@@ -43,7 +44,7 @@ function turn(squareid , player ){
 	board[squareid] = player;
 	document.getElementById(squareid).innerHTML=player;
 	let isWon = checkWin( board , player );
-	if(isWon ) {  gameOver(isWon) } 
+	if(isWon ) { over=true; gameOver(isWon) } 
 }
 
 function checkWin(currBoard , player ){
@@ -67,6 +68,7 @@ function checkWin(currBoard , player ){
 				break;
 		 }
 	 }
+	 console.log(result);
 	 return result;
 }
 
