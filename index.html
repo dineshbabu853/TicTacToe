@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+    <title>TicTacToe</title>
+</head>
+<body>
+    <div class="pyro" id="pyro">
+        <div class="before"></div>
+        <div class="after"></div>
+    </div>
+    <div class="difficulty" >
+        <h1><br> Tic Tac Toe <br> Game</h1>
+        <br>
+        <div class="pretty p-switch p-fill">
+            <input type="checkbox" id="check" />
+            <div class="state">
+                <label>Enable Difficult Mode</label>
+            </div>
+            <br>
+        </div>
+        
+    </div>
+<div class="gameboard" >
+    <table >
+        <tr>
+            <td class="cell" id="0"  >  </td>
+            <td class="cell" id="1"  >  </td>
+            <td class="cell" id="2"  >  </td>
+        </tr>
+        <tr>
+            <td class="cell" id="3"  >  </td>
+            <td class="cell" id="4"  >  </td>
+            <td class="cell" id="5"  >  </td>
+        </tr>
+        <tr>
+            <td class="cell" id="6"  >  </td>
+            <td class="cell" id="7"  >  </td>
+            <td class="cell" id="8"  >  </td>
+        </tr>
+    </table>
+    <div class="endGame">
+        <div class="text"></div>
+        <button onclick="startGame()" >Restart!</button>
+    </div>
+</div> 
+<script src="script.js" ></script>
+</body>
+</html>
+
